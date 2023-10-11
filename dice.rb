@@ -15,18 +15,12 @@ get("/") do
   <h2> Quick Links </h2>
 
   <ul>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/6 target=_blank> 2d6 </a>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/10 target=_blank> 2d10 </a>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/1/20 target=_blank> 1d20 </a>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/5/4 target=_blank> 5d4 </a>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/6 target=_blank> 2d6 </a> </li>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/10 target=_blank> 2d10 </a> </li>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/1/20 target=_blank> 1d20 </a> </li>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/5/4 target=_blank> 5d4 </a> </li>
   </ul>
   </body>"
-  
-
-
-
-
-
 end
 
 get("/zebra") do
