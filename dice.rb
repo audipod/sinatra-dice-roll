@@ -2,7 +2,23 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  "Hello World"
+  "<h1> Dice Rolls </h1>
+  <p> Congratulations. You've stumbled upon the ultimate dice-rolling website. </p>
+
+  <h2> Quick Links </h2>
+
+  <ul>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/6> 2d6 </a>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/10> 2d10 </a>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/1/20> 1d20 </a>
+    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/5/4> 5d4 </a>
+  </ul>"
+  
+
+
+
+
+
 end
 
 get("/zebra") do
