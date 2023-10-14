@@ -8,19 +8,7 @@ BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
 get("/") do
-  "<body> 
-  <h1> Dice Rolls </h1>
-  <p> Congratulations. You've stumbled upon the ultimate dice-rolling website. </p>
-
-  <h2> Quick Links </h2>
-
-  <ul>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/6 target=_blank> 2d6 </a> </li>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/2/10 target=_blank> 2d10 </a> </li>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/1/20 target=_blank> 1d20 </a> </li>
-    <li> <a href = https://shiny-umbrella-4j75q7p7j7q7f5jrp-4567.app.github.dev/dice/5/4 target=_blank> 5d4 </a> </li>
-  </ul>
-  </body>"
+  erb(:elephant)
 end
 
 get("/zebra") do
@@ -36,10 +24,9 @@ get("/dice/2/6") do
   second_die = rand(1..6)
   sum = first_die + second_die
 	
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  @outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
 	
-  "<h1>2d6</h1>
-   <p>#{outcome}</p>"
+  erb(:two_six)
 end
 
 get("/dice/2/10") do
@@ -47,19 +34,18 @@ get("/dice/2/10") do
   second_die = rand(1..10)
   sum = first_die + second_die
 
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  @outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
 
-  "<h1>2d10</h1>
-  <p>#{outcome}</p"
+  erb(:two_ten)
 end
 
 get("/dice/1/20") do
   first_die = rand(1..20)
 
-  outcome = "You rolled a #{first_die} for a total of #{first_die}"
+  @outcome = "You rolled a #{first_die} for a total of #{first_die}"
 
-  "<h1>1d20</h1>
-  <p>#{outcome}</p"
+  erb(:one_twenty)
+  
 end
 
 get("/dice/5/4") do
@@ -71,7 +57,9 @@ get("/dice/5/4") do
 
   sum = first_die + second_die + third_die + fourth_die + fifth_die 
 
-  outcome = "You rolled a #{first_die}, #{second_die}, #{third_die}, #{fourth_die}, and #{fifth_die} for a total of #{sum}"
-  "<h1>5d4</h1>
-  <p>#{outcome}</p>"
+  @outcome = "You rolled a #{first_die}, #{second_die}, #{third_die}, #{fourth_die}, and #{fifth_die} for a total of #{sum}"
+
+  erb(:five_four)
+
+  
 end
